@@ -48,7 +48,7 @@ jobs:
 
       - name: Terraform destroy
         run: |
-          terraform plan \
+          terraform destroy \
           --var="application=${{ env.application }}" \
           --var="environments=[\"${{ env.environment }}\"]" \
           --var="owner=${{ env.owner }}" \
