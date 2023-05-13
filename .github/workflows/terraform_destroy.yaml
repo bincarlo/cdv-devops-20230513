@@ -56,5 +56,5 @@ jobs:
           --var="prefix=${{ env.prefix }}" \
           --var="admin_password=${{ env.admin_password }}" \
           --var="environment=${{ env.environment }}" \
-          -auto-approve
+          --auto-approve
         working-directory: ./Terraform

@@ -4,10 +4,10 @@ on:
   pull_request:
     paths:
       - "Terraform/**"
-      - ".github/workflows/terraform_apply.yaml"
+    #   - ".github/workflows/terraform_apply.yaml"
     types:
       - closed
-  push:
+#   push:
 
 jobs:
   Apply:
