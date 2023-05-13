@@ -42,10 +42,10 @@ jobs:
           --out=tfplan
         working-directory: ./Terraform
 
-      - name: Terraform apply
-        run: terraform apply tfplan
-        working-directory: ./Terraform
+    #   - name: Terraform apply
+    #     run: terraform apply tfplan
+    #     working-directory: ./Terraform
 
       - name: Terraform destroy
-        run: terraform destroy -input=false -auto-approve
+        run: terraform destroy -auto-approve
         working-directory: ./Terraform
