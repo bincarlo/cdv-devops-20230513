@@ -33,7 +33,7 @@ jobs:
     
       - name: Terraform init
         run: terraform init
-        working-directory: "./Terraform"
+        working-directory: ./Terraform
 
       - name: Terraform plan
         run: |
