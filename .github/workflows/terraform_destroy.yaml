@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  Apply:
+  Destroy:
     name: Destroy Infrastructure
     runs-on: ubuntu-latest
     env:
@@ -47,5 +47,14 @@ jobs:
     #     working-directory: ./Terraform
 
       - name: Terraform destroy
-        run: terraform destroy -auto-approve
+        run: |
+          terraform plan \
+          --var="application=${{ env.application }}" \
+          --var="environments=[\"${{ env.environment }}\"]" \
+          --var="owner=${{ env.owner }}" \
+          --var="location=${{ env.location }}" \
+          --var="prefix=${{ env.prefix }}" \
+          --var="admin_password=${{ env.admin_password }}" \
+          --var="environment=${{ env.environment }}" \
+          -auto-approve
         working-directory: ./Terraform
