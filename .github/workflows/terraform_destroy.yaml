@@ -5,7 +5,7 @@ on:
 
 jobs:
   Apply:
-    name: Deploy Infrastructure
+    name: Destroy Infrastructure
     runs-on: ubuntu-latest
     env:
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
